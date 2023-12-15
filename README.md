@@ -1,6 +1,5 @@
 # IoT Workplace Safety and Security, Monitoring with Cloud Processing
 
-Contributors for website: Kenichi, Gustavo, Thien
 
 # Project Overview
 
@@ -135,4 +134,4 @@ Upon running the Ctrl Board on the Pi, users are presented with the following op
 ![IMG_0087](https://github.com/ZionC27/IoT-Workplace-Safety-and-Security--Monitoring-with-Cloud-Processing/assets/56661548/792e522f-2fb6-4552-9c81-e3d35ee0a6ed)
 
 
-
+Contributors for website: Kenichi, Gustavo, Thien
