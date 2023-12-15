@@ -1,5 +1,7 @@
 # IoT Workplace Safety and Security, Monitoring with Cloud Processing
 
+Contributors for website: Kenichi, Gustavo, Thien
+
 # Project Overview
 
 This project primarily focuses on demonstrating the integration of cloud processing and monitoring capabilities to efficiently manage sensor data. It showcases a system that adeptly collects sensor data and transmits it to a cloud infrastructure. The utilization of various cloud services enables effective processing and storage of this data.
