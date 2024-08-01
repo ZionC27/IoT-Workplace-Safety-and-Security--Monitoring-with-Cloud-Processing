@@ -1,67 +1,39 @@
-# IoT Workplace Safety and Security, Monitoring with Cloud Processing
+# IoT Workplace Safety and Security Monitoring with Cloud Processing
 
+## Introduction
+This project demonstrates the integration of cloud processing and monitoring capabilities to manage sensor data effectively. It highlights a system designed to collect sensor data, process it through cloud infrastructure, and visualize the results via a web interface.
 
-# Project Overview
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [System Overview](#system-overview)
+3. [Flow Chart](#flow-chart)
+4. [Hardware Components](#hardware-components)
+5. [Technologies and Services](#technologies-and-services)
+6. [Circuitry](circuitry)
 
-This project primarily focuses on demonstrating the integration of cloud processing and monitoring capabilities to efficiently manage sensor data. It showcases a system that adeptly collects sensor data and transmits it to a cloud infrastructure. The utilization of various cloud services enables effective processing and storage of this data.
+## Project Overview
 
-## Key Features
-
+**Key Features:**
 - **Cloud Integration:** Efficiently collects and transmits sensor data to the cloud for processing and storage.
-
 - **Cloud Services Utilization:** Utilizes various cloud services for data processing and storage.
-
 - **Visualization through Website Interface:** Showcases stored data visually via a website interface, enabling insights and informed decision-making.
-
 - **Analytics Tools Integration:** Incorporates analytics tools for data analysis, providing deeper insights.
-
 - **Raspberry Pi Control:** Demonstrates the system's capability to control the Raspberry Pi, triggering specific actions, highlighting its versatility and control over the IoT environment.
 
-## Project Components
-
-1. **Sensor Data Management:** Efficiently manages data collected from various sensors.
-
-2. **Cloud Processing and Storage:** Utilizes cloud services for processing and storing sensor data.
-
-3. **Data Visualization:** Showcases data through a website interface for visual representation.
-
-4. **Analytics and Insights:** Integrates analytics tools for deeper data analysis and insights.
-
-5. **Remote Control Functionalities:** Enables control over the Raspberry Pi, showcasing the system's comprehensive capabilities.
-
-This project serves as a comprehensive solution merging sensor data management, cloud processing, visualization, and remote control functionalities, highlighting the potential and versatility of IoT applications in real-world scenarios.
+- **Contributors:**
+- AWS Design/Code and Raspberry Pi Hardware/Code: [Zion](https://github.com/ZionC27)
+- Website Development: Kenichi, Gustavo, Thien
 
 
-# System Overview
+## System Overview
+### Hardware/System
+- **User Check-In:** Collects temperature data and evaluates user suitability.
+- **Work Time:** Monitors environmental factors during work hours.
+- **Off Work Turn On Security:** Activates sensors for security when off work.
+- **Web Control:** Responds to MQTT messages to control system functions.
+- **Turn Off System:** Closes all connections and terminates the program.
 
-## Hardware/System
-
-Upon running the Ctrl Board on the Pi, users are presented with the following options:
-
-1. **User check-in**
-   - Allows users to check in by entering their name and obtaining a temperature reading.
-   - Data is sent via MQTT protocol to AWS IoT Core, then directed to a Lambda function for processing.
-     - Lambda function evaluates user temperature for suitability to work.
-     - Processed data is saved to DynamoDB. User receives a message confirming clearance.
-     - LED on the board lights up if the user is cleared.
-
-2. **Work Time**
-   - Activates DHT11, MQ-2 Gas, and flame sensors.
-   - Sensor data is sent to an AWS Lambda function for processing and storage in DynamoDB.
-   - If fire is detected by the flame sensor, triggers an AWS SNS topic to send an email alert.
-
-3. **Off Work Turn On Security**
-   - Activates MQ-2 Gas, motion/collision, and flame sensors.
-   - Sensor data sent to AWS Lambda function for processing and storage in DynamoDB.
-
-4. **Web Control**
-   - Waits for an MQTT message.
-   - Triggers either the "Work Time" or "Off Work Turn On Security" function based on the received message.
-
-5. **Turn Off System**
-   - Terminates all connections and closes the program.
-
-## Cloud Processing & Monitoring (AWS Services)
+### Cloud Processing & Monitoring (AWS Services)
 
 1. **AWS IoT Core**
    - Uses MQTT for sending/receiving messages.
@@ -74,7 +46,7 @@ Upon running the Ctrl Board on the Pi, users are presented with the following op
    - Utilizes IoT Analytics Channel, Pipeline, and Data Store to store raw data in an S3 bucket.
    - SageMaker enables data analysis through a Jupyter Notebook instance.
 
-## Website (PHP-based)
+### Website (PHP-based)
 
 1. **Login and Sign-up Pages**
    - User authentication for system access.
@@ -94,7 +66,7 @@ Upon running the Ctrl Board on the Pi, users are presented with the following op
 
 - **Flame Sensor:** Detects the presence of a flame in front of the sensor.
 
-- **MQ-2 Gas Sensor:** Detects various gases like LPG, i-butane, propane, methane, alcohol, Hydrogen, and smoke in the surrounding.
+- **MQ-2 Gas Sensor:** Detects various gases like LPG, i-butane, propane, methane, alcohol, Hydrogen, and smoke in the surroundings.
 
 - **Collision Sensor:** Detects collisions with the sensor.
 
@@ -132,6 +104,3 @@ Upon running the Ctrl Board on the Pi, users are presented with the following op
  
 ## Circuitry:
 ![IMG_0087](https://github.com/ZionC27/IoT-Workplace-Safety-and-Security--Monitoring-with-Cloud-Processing/assets/56661548/792e522f-2fb6-4552-9c81-e3d35ee0a6ed)
-
-
-Contributors for website: Kenichi, Gustavo, Thien
