@@ -20,7 +20,7 @@ This project demonstrates the integration of cloud processing and monitoring cap
 - **Analytics Tools Integration:** Incorporates analytics tools for data analysis, providing deeper insights.
 - **Raspberry Pi Control:** Demonstrates the system's capability to control the Raspberry Pi, triggering specific actions, highlighting its versatility and control over the IoT environment.
 
-- **Contributors:**
+**Contributors:**
 - AWS Design/Code and Raspberry Pi Hardware/Code: [Zion](https://github.com/ZionC27)
 - Website Development: Kenichi, Gustavo, Thien
 
